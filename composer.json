@@ -1,0 +1,42 @@
+{
+    "name": "dangvandiep/platform",
+    "description": "BZK Platform API Helper",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Dang Diep",
+            "email": "dangvandiep2603@gmail.com"
+        }
+    ],
+    "homepage": "https://github.com/dangvandiep/platform",
+    "keywords": ["Laravel", "Platform"],
+    "require": {
+        "illuminate/support": "~5",
+        "guzzlehttp/guzzle": "~6.0",
+        "illuminate/contracts": "~5.4"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~6.0",
+        "orchestra/testbench": "~3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "DangVanDiep\\Platform\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "DangVanDiep\\Platform\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "DangVanDiep\\Platform\\PlatformServiceProvider"
+            ],
+            "aliases": {
+                "Platform": "DangVanDiep\\Platform\\Facades\\Platform"
+            }
+        }
+    }
+}

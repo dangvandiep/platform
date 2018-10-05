@@ -16,9 +16,12 @@ class GameKunlunDriver extends AbstractDriver implements Driver
     /**
      * {@inheritdoc}
      */
-    protected $config = [
-        'base_url' => 'https://plf.gamekunlun.com/api',
+    protected $apiBaseUrl = 'https://plf.gamekunlun.com/api';
 
+    /**
+     * {@inheritdoc}
+     */
+    protected $config = [
         'login'           => '/users/login.json',
         'register'        => '/users/register.json',
         'forgot_password' => '/users/forget_password.json',

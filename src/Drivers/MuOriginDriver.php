@@ -16,9 +16,12 @@ class MuOriginDriver extends AbstractDriver implements Driver
     /**
      * {@inheritdoc}
      */
-    protected $config = [
-        'base_url' => 'http://admin.muoriginfree.com:8880/api',
+    protected $apiBaseUrl = 'http://admin.muoriginfree.com:8880/api';
 
+    /**
+     * {@inheritdoc}
+     */
+    protected $config = [
         'login'           => '/users/login_v26.json',
         'register'        => '/users/register_v26.json',
         'forgot_password' => '/users/forget_password.json',

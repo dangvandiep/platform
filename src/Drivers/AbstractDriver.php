@@ -35,6 +35,13 @@ abstract class AbstractDriver
     protected $appkey;
 
     /**
+     * The config of api base url
+     *
+     * @var string
+     */
+    protected $apiBaseUrl;
+
+    /**
      * The config of driver URLs
      *
      * @var array
@@ -119,7 +126,7 @@ abstract class AbstractDriver
 
         $query = array_merge($query, $this->getDefaultQueries());
 
-        return $this->config['base_url'] . $this->config[$name] . '?' . http_build_query($query);
+        return $this->apiBaseUrl . $this->config[$name] . '?' . http_build_query($query);
     }
 
     /**
